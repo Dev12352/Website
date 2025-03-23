@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="highlight">Lazars</span>Portfolio
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Hello, I'm <span class="highlight">Lazar</span></h1>
+            <h2 class="animate-text delay-1">Full Stack Developer</h2>
+            <p class="animate-text delay-2">Specialized in building innovative solutions with Python, C++, and web technologies</p>
+            <div class="cta-buttons animate-text delay-3">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="window-title">code.py</div>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+def hello_world():
+    print("Welcome to my portfolio!")
+    
+    skills = [
+        "Python", "C++", 
+        "JavaScript", "HTML", "CSS"
+    ]
+    
+    for skill in skills:
+        print(f"I love coding in {skill}")
+        
+    return "Let's build something amazing!"
+
+hello_world()
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="profile-img">
+                    <div class="img-placeholder">
+                        <img src="Assets/IMG_user.png" alt="Placeholder Image">
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Full Stack Developer</h3>
+                <p>I'm a passionate programmer with expertise in both backend and frontend technologies. With a strong foundation in computer science, I enjoy solving complex problems and creating efficient, elegant solutions.</p>
+                <p>My journey in programming began with C++, expanded to Python for data science and backend development, and eventually embraced web technologies to create complete applications.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-text">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-text">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-text">Happy Clients</span>
+                    </div>
+                </div>
+                <a href="Assets/CV.pdf" target="_blank" class="btn download-btn"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-skill="Python">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <div class="skill-info">
+                            <h4>Python</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                            <span class="percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="C++">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-info">
+                            <h4>C++</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <span class="percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="JavaScript">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-skill="HTML">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <div class="skill-info">
+                            <h4>HTML</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 98%"></div>
+                            </div>
+                            <span class="percentage">98%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="CSS">
+                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                        <div class="skill-info">
+                            <h4>CSS</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                            <span class="percentage">92%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="React">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <div class="skill-info">
+                            <h4>React</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                            <span class="percentage">80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Frameworks</h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-skill="Git">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                        <div class="skill-info">
+                            <h4>Git</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="Flask">
+                        <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                        <div class="skill-info">
+                            <h4>Flask</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-skill="Docker">
+                        <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                        <div class="skill-info">
+                            <h4>Docker</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <span class="percentage">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Python">Python</button>
+            <button class="filter-btn" data-filter="C++">C++</button>
+            <button class="filter-btn" data-filter="Web">Web</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="Python">
+                <div class="project-img">
+                    <div class="img-placeholder py-img"></div>
+                </div>
+                <div class="project-info">
+                    <h3>Data Analysis Dashboard</h3>
+                    <p>A powerful Python dashboard for real-time data visualization using Pandas, NumPy, and Dash.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Data Science</span>
+                        <span>Dash</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="C++">
+                <div class="project-img">
+                    <div class="img-placeholder cpp-img"></div>
+                </div>
+                <div class="project-info">
+                    <h3>Game Physics Engine</h3>
+                    <p>A high-performance C++ physics engine for game development with collision detection and response.</p>
+                    <div class="project-tags">
+                        <span>C++</span>
+                        <span>Game Dev</span>
+                        <span>OpenGL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="Web">
+                <div class="project-img">
+                    <div class="img-placeholder web-img"></div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full stack e-commerce solution with responsive design, user authentication and payment processing.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="Python">
+                <div class="project-img">
+                    <div class="img-placeholder py-img"></div>
+                </div>
+                <div class="project-info">
+                    <h3>AI Image Recognition</h3>
+                    <p>A machine learning solution for image classification using TensorFlow and Python.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to me anytime. I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Belgrade, Serbia</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>lazar534l2@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+381 60 5651 377</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Dev12352" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="highlight">Dev</span>Portfolio
+            </div>
+            <p>Creating digital solutions with passion and precision.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 LazarsPortfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
