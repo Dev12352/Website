@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (contactForm) {
-    contactForm.addEventListener('submit', () => {
+    contactForm.addEventListener('submit', (e) => {
+        // Allow the form to submit to Web3Forms
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalBtnText = submitBtn.innerHTML;
 
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
             submitBtn.classList.add('success');
 
-            // Reset button after 3 seconds (but form submission is handled by Web3Forms)
+            // Reset button after 3 seconds
             setTimeout(() => {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
