@@ -100,40 +100,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form submission (just for demo)
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const formObject = Object.fromEntries(formData);
-            
-            // Simulate form submission
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalBtnText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
-            submitBtn.disabled = true;
-            
+    contactForm.addEventListener('submit', () => {
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.innerHTML;
+
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+            submitBtn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
+            submitBtn.classList.add('success');
+
+            // Reset button after 3 seconds (but form submission is handled by Web3Forms)
             setTimeout(() => {
-                // Success message (in a real app, you'd send the data to a server)
-                console.log('Form data:', formObject);
-                submitBtn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
-                submitBtn.classList.add('success');
-                
-                // Reset the form
-                contactForm.reset();
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('success');
-                }, 3000);
-            }, 1500);
-        });
-    }
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('success');
+            }, 3000);
+        }, 1500);
+    });
+}
+
 
     // Typing animation for code window
     const codeContent = document.querySelector('.code-content code');
